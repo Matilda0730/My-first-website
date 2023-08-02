@@ -13,21 +13,68 @@
 
 <title>1 - DOG</title>
 <meta charset="utf-8">
+<style>
+    body{
+        margin: 0
+        ;
+    }
+    a {
+        color:black;
+        text-decoration: none;
+    }
+    h1 {
+        font-size: 45px;
+        text-align: center;
+        border-bottom: 1px solid gray;
+        margin: 0;
+        padding: 20px;
+    }
+    #grid {
+        display: grid;
+        grid-template-columns: 150px 1fr; /*1번째div /2번째 div */
+    }
+    #grid ul{
+        border-right: 1px solid gray;
+        width: 100px;
+        margin: 0;
+        padding-left: 33px;
+        padding-top: 30px;
+    }
+    #grid #article{
+        padding-left: 30px;
+    }
+    /* screen width < 800px */
+    @media(max-width:800px){
+        #grid {
+        display: block;
+        }
+        #grid ul{
+        border-right:none;
+        }
+        h1 {
+        border-bottom:none;
+        }
+        
+    }
+</style>
 </head>
 <body>
-    <h1><a href="index.html">WHAT IS DOG</a></h1>
-<ol>
+    <h1><a href="index.html">EGGDOG</a></h1>
+<div id="grid">
+<ul>
     <li><a href="1.html">EGG</a></li>
     <li><a href="2.html">DOG</a></li>
     <li><a href="3.html">EGGDOG</a></li>
-</ol>
-
-<h2>DOG</h2>
-<p>
-    <img src="dog.jpg" width="30%">
-</p>
-<p style="margin-top:10px;">
-    Dogs are cute.
-</p>
+</ul>
+    <div id="article">
+        <h2>DOG</h2>
+        <p>
+            <img src="dog.jpg" width="30%">
+        </p>
+        <p style="margin-top:10px;">
+            Dogs are cute. The dog (Canis familiaris<strong><a href="https://en.wikipedia.org/wiki/Dog#cite_note-Alvares2019-4">[4]</a></strong>[5] or Canis lupus familiaris[5]) is a domesticated descendant of the wolf. Also called the domestic dog, it is derived from extinct Pleistocene wolves,[6][7] and the modern wolf is the dog's nearest living relative.[8] Dogs were the first species to be domesticated[9][8] by hunter-gatherers over 15,000 years ago[7] before the development of agriculture.[1] Due to their long association with humans, dogs have expanded to a large number of domestic individuals[10] and gained the ability to thrive on a starch-rich diet that would be inadequate for other canids.[11]
+        </p>
+    </div>
+</div>
 </body>
 </html>

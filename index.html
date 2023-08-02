@@ -13,16 +13,61 @@
 
 <title>1 - WELCOME</title>
 <meta charset="utf-8">
+<style>
+    body{
+        margin: 0
+        ;
+    }
+    a {
+        color:black;
+        text-decoration: none;
+    }
+    h1 {
+        font-size: 45px;
+        text-align: center;
+        border-bottom: 1px solid gray;
+        margin: 0;
+        padding: 20px;
+    }
+    #grid {
+        display: grid;
+        grid-template-columns: 150px 1fr; /*1번째div /2번째 div */
+    }
+    #grid ul{
+        border-right: 1px solid gray;
+        width: 100px;
+        margin: 0;
+        padding-left: 33px;
+        padding-top: 30px;
+    }
+    #grid #eggdog1{
+        padding-left: 30px;
+    }
+    /* screen width < 800px */
+    @media(max-width:800px){
+        #grid {
+        display: block;
+        }
+        #grid ul{
+        border-right:none;
+        }
+        h1 {
+        border-bottom:none;
+        }
+        
+    }
+</style>
 </head>
 <body>
     <h1><a href="index.html">EGGDOG</a></h1>
-<ol>
+<div id="grid">
+<ul>
     <li><a href="1.html">EGG</a></li>
     <li><a href="2.html">DOG</a></li>
     <li><a href="3.html">EGGDOG</a></li>
-</ol>
-
-<h2>MY REAL NAME IS PomPom</h2>
+</ul>
+<div id="eggdog1">
+<h2>MY REAL NAME IS PomPom!</h2>
 
 <p>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/DFPdtdY-a_c?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -69,5 +114,7 @@
     })();
     </script>
     <!--End of Tawk.to Script-->
+    </div>
+</div>
 </body>
 </html>
