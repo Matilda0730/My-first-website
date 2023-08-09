@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <h1><a href="index.html">EGGDOG</a></h1>
+  <input type="button" value="night" class="nightday" onclick="
+  var target = document.querySelector('body');
+  var button = document.querySelectorAll('.nightday');
+  var alist = document.querySelectorAll('a');
+  var i;
+  var e;
+  
+  if (this.value === 'night') {
+      target.style.backgroundColor = 'black';
+      target.style.color = 'white';
+  
+      e = 0;
+      while (e < button.length) {
+          button[e].value = 'day';
+          e = e + 1;
+      }
+  
+      i = 0;
+      while (i < alist.length) {
+          alist[i].style.color = 'powderblue';
+          i = i + 1;
+      }
+  } else {
+      target.style.backgroundColor = 'white';
+      target.style.color = 'black';
+  
+      e = 0;
+      while (e < button.length) {
+          button[e].value = 'night';
+          e = e + 1;
+      }
+  
+      i = 0;
+      while (i < alist.length) {
+          alist[i].style.color = 'blue';
+          i = i + 1;
+      }
+  }
+  ">
+  
+</body>
+</html>
