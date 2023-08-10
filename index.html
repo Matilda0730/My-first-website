@@ -1,15 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QR1W1QEG5W"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QR1W1QEG5W"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-QR1W1QEG5W');
-</script>
+    gtag('config', 'G-QR1W1QEG5W');
+    </script>
+
+    <script>
+        function nightDayHandler(self){
+        var target = document.querySelector('body')
+        var button = document.querySelectorAll('.nightday');
+        var alist = document.querySelectorAll('a');
+        var i;
+        var e;
+
+
+        if(self.value ==='night'){
+            target.style.backgroundColor='black';
+            target.style.color='white';
+
+            var e=0;
+        while(e<button.length){
+            button[e].value ='day'
+            e=e+1}
+
+            var i=0;
+            while(i<alist.length){
+            alist[i].style.color='powderblue';
+            i=i+1;}
+        }
+        else{
+            target.style.backgroundColor='white';
+            target.style.color='black';
+            var e=0;
+            while(e<button.length){
+            button[e].value ='night'
+            e=e+1}
+        
+            var i=0;
+            while(i<alist.length){
+            alist[i].style.color='blue';
+            i=i+1;}
+        }
+        }
+    </script>
 
 <title>1 - WELCOME</title>
 <meta charset="utf-8">
@@ -18,42 +57,8 @@
 <body>
     <h1><a href="index.html">EGGDOG</a></h1>
     <input type="button" value="night" class="nightday" onclick="
-    var target = document.querySelector('body')
-    var button = document.querySelectorAll('.nightday');
-    var alist = document.querySelectorAll('a');
-    var i;
-    var e;
-
-
-    if(this.value ==='night'){
-        target.style.backgroundColor='black';
-        target.style.color='white';
-
-        var e=0;
-       while(e<button.length){
-        button[e].value ='day'
-        e=e+1}
-
-        var i=0;
-        while(i<alist.length){
-        alist[i].style.color='powderblue';
-        i=i+1;}
-    }
-    else{
-        target.style.backgroundColor='white';
-        target.style.color='black';
-        var e=0;
-        while(e<button.length){
-        button[e].value ='night'
-        e=e+1}
-    
-        var i=0;
-        while(i<alist.length){
-        alist[i].style.color='blue';
-        i=i+1;}
-    }
-    ">
-
+    nightDayHandler(this)
+    ";>
 
 
 <div id="grid">
@@ -118,41 +123,13 @@
 <body>
 
     <input type="button" value="night" class="nightday" onclick="
-    var target = document.querySelector('body')
-    var button = document.querySelectorAll('.nightday');
-    var alist = document.querySelectorAll('a');
-    var i;
-    var e;
-
-
-    if(this.value ==='night'){
-        target.style.backgroundColor='black';
-        target.style.color='white';
-
-        var e=0;
-       while(e<button.length){
-        button[e].value ='day'
-        e=e+1}
-
-        var i=0;
-        while(i<alist.length){
-        alist[i].style.color='powderblue';
-        i=i+1;}
-    }
-    else{
-        target.style.backgroundColor='white';
-        target.style.color='black';
-        var e=0;
-        while(e<button.length){
-        button[e].value ='night'
-        e=e+1}
-    
-        var i=0;
-        while(i<alist.length){
-        alist[i].style.color='blue';
-        i=i+1;}
-    }
+    nightDayHandler(this);
     ">
-
+ <input type="button" value="night" class="nightday" onclick="
+ nightDayHandler(this);
+ ">
+  <input type="button" value="night" class="nightday" onclick="
+  nightDayHandler(this);
+  ">
 </body>
 </html>
